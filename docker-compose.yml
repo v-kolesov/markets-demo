@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  markets_demo:
+    ports:
+      - "5000:5000"
+    restart: always
+    container_name: ${APP_NAME}
+    build:
+      context: ./api
+    tty: true
+    volumes:
+      - "./api:/app"
+      - "./.data/db:/data"
+    env_file:
+      - .env
+  redis:
+    container_name: ${APP_NAME}_redis
+    image: "redis:latest"
+    volumes:
+      - ${PWD}.data/redis:/data

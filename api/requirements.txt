@@ -1,0 +1,10 @@
+Flask-SQLAlchemy
+wtforms_alchemy
+pytest-flask
+Flask-WTF
+gunicorn
+flask-restplus
+pep8
+passlib
+marshmallow
+flask_redis

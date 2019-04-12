@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z "$FLASK_ENV" ] || [ $FLASK_ENV == 'production' ]
+then
+    gunicorn -b "0.0.0.0:5000" run:app
+else
+    python run.py
+fi

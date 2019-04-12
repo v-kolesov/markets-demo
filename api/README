@@ -1,0 +1,6 @@
+How to install and check it
+* git clone
+* cd
+* docker  exec -it   market_demo /bin/bash
+and there py.test
+
